@@ -3,7 +3,8 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            mailList: []
+            mailList: [],
+            visible: false
         }
     },
 
@@ -22,9 +23,17 @@ createApp({
                     })
 
             }
+        },
+
+        visibility() {
+            this.visible = true
         }
     },
     mounted() {
+
         this.randomTenMail()
+
+        setTimeout(this.visibility, 5000)
+        
     }
 }).mount('#app')

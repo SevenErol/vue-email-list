@@ -12,7 +12,7 @@
 <body>
 
     <div id="app">
-        <ul>
+        <ul v-show="visible">
             <li v-for="mail in mailList">{{ mail }}</li>
         </ul>
     </div>
