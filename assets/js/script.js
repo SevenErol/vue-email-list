@@ -4,7 +4,7 @@ createApp({
     data() {
         return {
             mailList: [],
-            visible: false
+            defaultMessage: "La lista sta caricando"
         }
     },
 
@@ -23,17 +23,12 @@ createApp({
                     })
 
             }
-        },
-
-        visibility() {
-            this.visible = true
         }
+
     },
     mounted() {
 
         this.randomTenMail()
-
-        setTimeout(this.visibility, 5000)
         
     }
 }).mount('#app')
